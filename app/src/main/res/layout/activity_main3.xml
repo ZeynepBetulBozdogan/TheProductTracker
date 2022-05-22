@@ -31,7 +31,7 @@
                 android:gravity="center_horizontal"
                 android:padding="10sp"
 
-                android:text="Sonuç: "
+                android:text="Result: "
                 android:textColor="@color/black"
                 android:textSize="16sp" />
         </TableRow>
@@ -47,7 +47,7 @@
                 android:background="@drawable/textlines3"
                 android:gravity="center_horizontal"
                 android:padding="10sp"
-                android:text="Ürün Kodu :"
+                android:text="Item Id :"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
             <TextView
@@ -72,7 +72,7 @@
                 android:background="@drawable/textlines3"
                 android:gravity="center_horizontal"
                 android:padding="10sp"
-                android:text="Barkod :"
+                android:text="Item Barcode :"
                 android:textColor="@color/black"
                 android:textSize="16dp" />
             <TextView
@@ -97,7 +97,7 @@
                 android:background="@drawable/textlines3"
                 android:gravity="center_horizontal"
                 android:padding="10sp"
-                android:text="Ürün Adı :"
+                android:text="Item Name:"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -127,7 +127,7 @@
                 android:background="@drawable/textlines3"
                 android:gravity="center_horizontal"
                 android:padding="10sp"
-                android:text="Ürün Fiyatı :"
+                android:text="Item Price :"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -150,7 +150,7 @@
             android:layout_centerVertical="true"
             android:layout_marginTop="50dp"
             android:height="48dp"
-            android:hint="Barkod veya Ürün Kodu Giriniz."
+            android:hint="Enter Barcode or ItemId."
             android:textColor="@color/black" />
 
         <Button
@@ -160,7 +160,7 @@
             android:layout_below="@+id/userBarcode2"
             android:layout_marginTop="40dp"
             android:backgroundTint="@color/purple_200"
-            android:text="ÜRÜN BİLGİSİ SORGULA" />
+            android:text="View Product Information" />
 
         <Button
             android:id="@+id/scanbtn1"
@@ -170,7 +170,7 @@
             android:width="45dp"
             android:height="48dp"
             android:backgroundTint="@color/purple_200"
-            android:text="Barkod Okut" />
+            android:text="Scan Barcode" />
 
         <Button
             android:id="@+id/previous3"
@@ -180,7 +180,7 @@
             android:width="45dp"
             android:height="48dp"
             android:backgroundTint="@color/purple_200"
-            android:text="GERİ" />
+            android:text="Previous" />
         <!--android:layout_width="wrap_content"
         android:layout_height="wrap_content"-->
 

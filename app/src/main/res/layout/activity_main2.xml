@@ -20,6 +20,6 @@
         android:layout_centerVertical="true"
         android:backgroundTint="@color/purple_200"
         android:gravity="center"
-        android:text="ÜRÜN BİLGİSİ GÖRÜNTÜLE" />
+        android:text="Product Information" />
 
 </LinearLayout>
