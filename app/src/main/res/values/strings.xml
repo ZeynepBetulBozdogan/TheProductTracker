@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="dialog_message">Oturumunuzun süresi doldu lütfen tekrar giriş yapınız.</string>
-    <string name="dialog_title">Bildirim</string>
+    <string name="app_name">ProductTracker</string>
+
 </resources>

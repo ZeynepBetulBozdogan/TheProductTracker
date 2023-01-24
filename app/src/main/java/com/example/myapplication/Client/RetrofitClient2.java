@@ -41,7 +41,7 @@ public class RetrofitClient2 {
                 MediaType mediaType = MediaType.parse("application/json");
                 RequestBody body = RequestBody.create(mediaType, "{\r\n\"itemcode\":\""+item+"\"\r\n}");
                 Request request = new Request.Builder()
-                        .url("http://10.0.2.2:44327/api/Get")
+                        .url("http://198.168.1.3:44327/api/Get")
                         .method("POST", body)
                         .addHeader("Content-Type", "application/json")
                         .addHeader("Authorization","Bearer "+ token)

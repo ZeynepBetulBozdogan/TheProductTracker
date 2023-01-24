@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (TextUtils.isEmpty(Username.getText()) ||TextUtils.isEmpty(Password.getText())) {
-                    Toast.makeText(MainActivity.this, "Lütfen Kullanıcı adı ve parola giriniz.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Please enter username and password.", Toast.LENGTH_LONG).show();
                 }
                 String username = Username.getText().toString();
                 String password = Password.getText().toString();
@@ -85,15 +85,15 @@ public class MainActivity extends AppCompatActivity {
                         else{
                             Username.getText().clear();
                             Password.getText().clear();
-                            Username.setHint("Kullanıcı adı");
-                            Password.setHint("Parola");
-                            Toast.makeText(MainActivity.this,"Kullanıcı adı veya parola yanlış",Toast.LENGTH_LONG).show();
+                            Username.setHint("Username");
+                            Password.setHint("Password");
+                            Toast.makeText(MainActivity.this,"Username or password is wrong.",Toast.LENGTH_LONG).show();
                         }
                     }
 
                     @Override
                     public void onFailure(Call<LoginResponse> call, Throwable t) {
-                        Toast.makeText(MainActivity.this, "Servise Bağlanılamıyor.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "The service can not be reached.", Toast.LENGTH_LONG).show();
                         Log.e("Error", t.getMessage());
                     }
                 });

@@ -21,7 +21,7 @@ public class RetrofitClient {
             logger.setLevel(HttpLoggingInterceptor.Level.HEADERS);
 
             OkHttpClient client = new OkHttpClient.Builder().addInterceptor(logger).build();
-            Retrofit retrofit = new Retrofit.Builder().addConverterFactory(GsonConverterFactory.create()).baseUrl("http://10.0.2.2:44327/api/").client(client).build();
+            Retrofit retrofit = new Retrofit.Builder().addConverterFactory(GsonConverterFactory.create()).baseUrl("http://198.168.1.3:44327/api/").client(client).build();
 
             return retrofit;
         }

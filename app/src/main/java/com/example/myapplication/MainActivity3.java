@@ -63,8 +63,8 @@ public class MainActivity3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
-        getSupportActionBar().setTitle("MINISO");
-        getSupportActionBar().setTitle("MINISO");
+        getSupportActionBar().setTitle("ProductTracker");
+        getSupportActionBar().setTitle("ProductTracker");
         scanBtn = (Button) findViewById(R.id.scanbtn1);
         SitemID1 = (TextView) findViewById(R.id.SitemID1);
         SBarcode1 = (TextView) findViewById(R.id.SBarcode1);
@@ -97,7 +97,7 @@ public class MainActivity3 extends AppCompatActivity {
         getItemInfo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (TextUtils.isEmpty(userBarcode2.getText())) {
-                    Toast.makeText(MainActivity3.this, "Lütfen Barkod Giriniz.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity3.this, "Please, enter the barcode", Toast.LENGTH_LONG).show();
                 }
                 String itemcode = userBarcode2.getText().toString();
                 System.out.println(token);
@@ -162,7 +162,7 @@ public void tokenTime(){
         SBarcode1.setText(" ");
         SItemName1.setText(" ");
         SPrice1.setText(" ");
-        Result.setText("Sonuç");
+        Result.setText("Result");
         Result.setBackgroundResource(R.drawable.textlines3);
         SitemID1.setBackgroundResource(R.drawable.textlines3);
         SBarcode1.setBackgroundResource(R.drawable.textlines3);
@@ -217,7 +217,7 @@ public void tokenTime(){
                                             }
                                         });
                                         ring.start();
-                                        Toast.makeText(MainActivity3.this, "Fiyat Bilgisi Bulunamadı.", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(MainActivity3.this, "Can not find the price.", Toast.LENGTH_LONG).show();
                                         Result.setBackgroundResource(R.drawable.textlines);
                                         SitemID1.setBackgroundResource(R.drawable.textlines);
                                         SBarcode1.setBackgroundResource(R.drawable.textlines);
@@ -237,7 +237,7 @@ public void tokenTime(){
                                             }
                                         });
                                         ring.start();
-                                        Toast.makeText(MainActivity3.this, "Ürün Bulunamadı!", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(MainActivity3.this, "This product could not be found!", Toast.LENGTH_LONG).show();
                                         Result.setBackgroundResource(R.drawable.textlines4);
                                         SitemID1.setBackgroundResource(R.drawable.textlines4);
                                         SBarcode1.setBackgroundResource(R.drawable.textlines4);
@@ -258,7 +258,7 @@ public void tokenTime(){
                                             }
                                         });
                                         ring.start();
-                                        Toast.makeText(MainActivity3.this, "Kullanıcı ürün sorgulama yetkisine sahip değil!", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(MainActivity3.this, "Access denied!", Toast.LENGTH_LONG).show();
                                         Result.setBackgroundResource(R.drawable.textlines5);
                                         SitemID1.setBackgroundResource(R.drawable.textlines5);
                                         SBarcode1.setBackgroundResource(R.drawable.textlines5);
@@ -272,10 +272,10 @@ public void tokenTime(){
                                 }
                             } else if (response.code() == 401) {
                                 new AlertDialog.Builder(MainActivity3.this)
-                                        .setTitle("Bildirim")
-                                        .setMessage("Oturumunuzun süresi dolmuştur.Lütfen tekrar giriş yapınız.")
+                                        .setTitle("Notification")
+                                        .setMessage("The session is over.Please log in again.")
                                         .setCancelable(false)
-                                        .setPositiveButton("Tamam", new DialogInterface.OnClickListener() {
+                                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
                                             }
@@ -287,7 +287,7 @@ public void tokenTime(){
 
                         @Override
                         public void onFailure(Call<ItemResponse> call, Throwable t) {
-                            Toast.makeText(MainActivity3.this, "Servise Bağlanılamıyor.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(MainActivity3.this, "The service can not be reached.", Toast.LENGTH_LONG).show();
 
                         Log.e("Error", t.getMessage());
                         }
@@ -303,7 +303,7 @@ public void tokenTime(){
         IntentResult intentResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (intentResult != null) {
             if (intentResult.getContents() == null) {
-                Toast.makeText(getBaseContext(), "İptal edildi.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(), "Cancelled.", Toast.LENGTH_SHORT).show();
             } else {
                 ItemInfo(intentResult.getContents(),token);
             }
