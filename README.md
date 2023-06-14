@@ -30,11 +30,6 @@ git clone https://github.com/ZeynepBetulBozdogan/ProductTrack.git
 
 After you clone the project, open project on Android Studio.
 
-**For Linux**
-```` Linux
-cd barcode-qrcode-reader
-code .
-`````
 **Change Base Url**
 ```` Java
 OkHttpClient client = new OkHttpClient.Builder().addInterceptor(logger).build();
